@@ -2,7 +2,7 @@
 
 **WIP**
 
-### Inspired by:w!
+### Inspired by
 
 - [trpc-chrome](https://github.com/jlalmes/trpc-chrome)
 - [comlink](https://github.com/GoogleChromeLabs/comlink)
