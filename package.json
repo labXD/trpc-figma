@@ -26,6 +26,7 @@
     "concurrently": "^7.6.0",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.0",
     "rimraf": "^3.0.2",
     "tslib": "^2.4.1",
