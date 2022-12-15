@@ -1,3 +1,1 @@
-export const handler = () => {
-  console.log("Hello world!");
-};
+export * from "./Link";

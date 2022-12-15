@@ -6,10 +6,12 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
+    "dev": "tsup src/index.ts --watch",
+    "dev:all": "pnpm run dev & pnpm run -r dev",
     "typecheck": "tsc --noEmit",
     "build:pkg": "tsup src/index.ts --format esm,cjs --dts",
     "prebuild": "rimraf dist",
-    "build": "concurrently pnpm:typcheck pnpm:build:pkg"
+    "build": "pnpm run typecheck && pnpm run build:pkg"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +22,8 @@
   },
   "devDependencies": {
     "@figma/plugin-typings": "^1.57.0",
+    "@trpc/client": "^10.5.0",
+    "@trpc/server": "^10.5.0",
     "@types/node": "^18.11.11",
     "@typescript-eslint/eslint-plugin": "^5.45.1",
     "@typescript-eslint/parser": "^5.45.1",
