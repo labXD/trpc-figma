@@ -3,7 +3,6 @@
   "version": "0.1.0-alpha.1",
   "description": "tRPC adapter for figma plugins",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "tsup src/index.ts --watch",
@@ -22,6 +21,7 @@
   },
   "devDependencies": {
     "@figma/plugin-typings": "^1.57.0",
+    "@swc/core": "^1.3.23",
     "@trpc/client": "^10.5.0",
     "@trpc/server": "^10.5.0",
     "@types/node": "^18.11.11",
