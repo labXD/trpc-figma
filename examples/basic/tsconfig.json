@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "target": "es6",
-    "jsx": "react",
+    "target": "ES5",
+    "jsx": "react-jsx",
     "typeRoots": [
       "./node_modules/@types",
       "./node_modules/@figma"
     ],
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "allowJs": true
   },
   "include": [
     "src/**/*.ts",

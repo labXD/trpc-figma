@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import * as ReactDOM from "react-dom";
+import React, { useState, useRef } from "react";
+import { createRoot } from "react-dom/client";
 import "./ui.css";
 import { trpc } from "./trpc.ui";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -25,14 +25,10 @@ export function App() {
 declare function require(path: string): any;
 function AppBak() {
   const testMut = trpc.hello2.useMutation();
-  const inputRef = React.useRef<HTMLInputElement>(null);
+  const t = trpc.hello.useQuery({ text: "World" });
 
   const onCreate = () => {
-    const count = Number(inputRef.current?.value || 0);
-    parent.postMessage(
-      { pluginMessage: { type: "create-rectangles", count } },
-      "*"
-    );
+    testMut.mutate();
   };
 
   const onCancel = () => {
@@ -46,11 +42,12 @@ function AppBak() {
         <h2>Rectangle Creator</h2>
       </header>
       <section>
-        <input id="input" type="number" min="0" ref={inputRef} />
+        <input id="input" type="number" min="0" />
         <label htmlFor="input">Rectangle Count</label>
+        <h3>{t.data}</h3>
       </section>
       <footer>
-        <button className="brand" onClick={() => testMut.mutate()}>
+        <button className="brand" onClick={() => onCreate()}>
           Create
         </button>
         <button onClick={onCancel}>Cancel</button>
@@ -59,4 +56,9 @@ function AppBak() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("react-page"));
+const container = document.getElementById("react-page");
+if (container) {
+  const root = createRoot(container);
+
+  root.render(<App />);
+}

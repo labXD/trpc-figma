@@ -2,17 +2,17 @@ import { initTRPC } from "@trpc/server";
 import { z } from "zod";
 const t = initTRPC.create();
 
-const appRouter = t.router({
+export const appRouter = t.router({
   hello: t.procedure
     .input(
       z
         .object({
-          name: z.string().nullish(),
+          text: z.string().nullish(),
         })
         .nullish()
     )
     .query((req) => {
-      return `Hello ${req?.input?.name}`;
+      return `Hello ${req.input?.text}`;
     }),
   hello2: t.procedure.mutation(() => {
     console.log(`Hello World!`);
