@@ -1,6 +1,6 @@
 {
   "name": "trpc-figma",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "tRPC adapter for figma plugins",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,8 @@
   "keywords": [],
   "author": "labXD",
   "contributors": [
-    "Walee Ahmed <walee@labxd.com> (https://github.com/wallexd)"
+    "Walee Ahmed <walee@labxd.com> (https://github.com/wallexd)",
+    "Jimmy Nguyen <jimmy@labxd.com> (https://github.com/jimmynxd)"
   ],
   "publishConfig": {
     "access": "public"
@@ -30,8 +31,8 @@
   ],
   "license": "MIT",
   "peerDependencies": {
-    "@trpc/client": "^10.0.0",
-    "@trpc/server": "^10.0.0"
+    "@trpc/client": "^10.5.0",
+    "@trpc/server": "^10.5.0"
   },
   "devDependencies": {
     "@figma/plugin-typings": "^1.57.0",
