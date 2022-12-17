@@ -1,2 +1,2 @@
 export * from "./link";
-export * from "./hanlder";
+export { createFigmaHandler, type CreateFigmaHandlerOptions } from "./hanlder";

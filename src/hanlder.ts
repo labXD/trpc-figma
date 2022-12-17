@@ -15,7 +15,7 @@ export type CreateFigmaContextOptions = {
   res: undefined;
 };
 
-export type CreateChromeHandlerOptions<TRouter extends AnyRouter> = Pick<
+export type CreateFigmaHandlerOptions<TRouter extends AnyRouter> = Pick<
   BaseHandlerOptions<TRouter, CreateFigmaContextOptions["req"]> &
     NodeHTTPCreateContextOption<
       TRouter,
@@ -26,7 +26,7 @@ export type CreateChromeHandlerOptions<TRouter extends AnyRouter> = Pick<
 >;
 
 export const createFigmaHandler = <TRouter extends AnyRouter>(
-  opts: CreateChromeHandlerOptions<TRouter>
+  opts: CreateFigmaHandlerOptions<TRouter>
 ) => {
   const { router, createContext, onError } = opts;
   const { transformer } = router._def._config;
