@@ -13,7 +13,21 @@
     "build": "pnpm run typecheck && pnpm run build:pkg"
   },
   "keywords": [],
-  "author": "",
+  "author": "labXD",
+  "contributors": [
+    "Walee Ahmed <walee@labxd.com> (https://github.com/wallexd)"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/labXD/figma-trpc/"
+  },
+  "files": [
+    "README.md",
+    "dist"
+  ],
   "license": "MIT",
   "peerDependencies": {
     "@trpc/client": "^10.0.0",
