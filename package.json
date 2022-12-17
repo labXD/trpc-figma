@@ -1,6 +1,6 @@
 {
   "name": "trpc-figma",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0",
   "description": "tRPC adapter for figma plugins",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
     "dev": "tsup src/index.ts --watch",
     "dev:all": "pnpm run dev & pnpm run -r dev",
     "typecheck": "tsc --noEmit",
-    "build:pkg": "tsup src/index.ts --format esm,cjs --dts",
+    "build:pkg": "tsup src/index.ts --format cjs --dts",
     "prebuild": "rimraf dist",
     "build": "pnpm run typecheck && pnpm run build:pkg"
   },
