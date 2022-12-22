@@ -45,7 +45,7 @@ Setup `createFigmaHandler` in the main thread:
 
 ```ts
 import { initTRPC } from "@trpc/server";
-import { createFigmaHandler } from "trpc-figma";
+import { createFigmaHandler } from "trpc-figma/adapter";
 
 const t = initTRPC.create({
   isServer: false,
@@ -67,7 +67,7 @@ Add `figmaUiLink` to the `trpc` configuration in the UI thread:
 
 ```ts
 import { createTRPCClient } from "@trpc/client";
-import { figmaUiLink } from "trpc-figma";
+import { figmaUiLink } from "trpc-figma/link";
 
 import type { AppRouter } from "./background";
 
