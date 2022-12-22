@@ -1,18 +1,20 @@
 {
   "name": "trpc-figma",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "tRPC adapter for figma plugins",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "tsup src/index.ts --watch",
     "dev:all": "pnpm run dev & pnpm run -r dev",
     "typecheck": "tsc --noEmit",
-    "build:pkg": "tsup src/index.ts --format cjs --dts",
+    "build:pkg": "tsup src/adapter/index.ts src/link/index.ts --format cjs --dts",
     "prebuild": "rimraf dist",
     "build": "pnpm run typecheck && pnpm run build:pkg"
   },
-  "keywords": [],
+  "keywords": [
+    "trpc",
+    "figma",
+    "figma-plugin",
+    "trpc-adapter"
+  ],
   "author": "labXD",
   "contributors": [
     "Walee Ahmed <walee@labxd.com> (https://github.com/wallexd)",
