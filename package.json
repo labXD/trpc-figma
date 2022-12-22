@@ -2,6 +2,16 @@
   "name": "trpc-figma",
   "version": "0.2.0",
   "description": "tRPC adapter for figma plugins",
+  "exports": {
+    "adapter": {
+      "require": "./dist/adapter/index.js",
+      "types": "./dist/adapter/index.d.ts"
+    },
+    "link": {
+      "require": "./dist/link/index.js",
+      "types": "./dist/link/index.d.ts"
+    }
+  },
   "scripts": {
     "dev:all": "pnpm run dev & pnpm run -r dev",
     "typecheck": "tsc --noEmit",
