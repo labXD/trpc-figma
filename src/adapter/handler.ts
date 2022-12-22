@@ -8,7 +8,7 @@ import type { NodeHTTPCreateContextOption } from "@trpc/server/dist/adapters/nod
 import type { BaseHandlerOptions } from "@trpc/server/dist/internals/types";
 import { Unsubscribable, isObservable } from "@trpc/server/observable";
 
-import type { TRPCFigmaRequest, TRPCFigmaResponse } from "./types";
+import type { TRPCFigmaRequest, TRPCFigmaResponse } from "../types";
 
 export type CreateFigmaContextOptions = {
   req: typeof figma.pluginId;

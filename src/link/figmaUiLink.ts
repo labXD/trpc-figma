@@ -1,7 +1,7 @@
 import { TRPCClientError, TRPCLink } from "@trpc/client";
 import type { AnyRouter } from "@trpc/server";
 import { observable } from "@trpc/server/observable";
-import type { TRPCFigmaResponse, TRPCFigmaRequest } from "./types";
+import type { TRPCFigmaResponse, TRPCFigmaRequest } from "../types";
 
 interface Options {
   targetOrigin?: string;

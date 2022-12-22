@@ -1,0 +1,1 @@
+export { figmaUiLink } from "./figmaUiLink";
