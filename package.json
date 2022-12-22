@@ -1,6 +1,6 @@
 {
   "name": "trpc-figma",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "tRPC adapter for figma plugins",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/labXD/figma-trpc/"
+    "url": "https://github.com/labXD/trpc-figma/"
   },
   "files": [
     "README.md",
