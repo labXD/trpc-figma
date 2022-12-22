@@ -58,7 +58,7 @@ const appRouter = t.router({
 
 export type AppRouter = typeof appRouter;
 
-createChromeHandler({
+createFigmaHandler({
   router: appRouter,
 });
 ```
