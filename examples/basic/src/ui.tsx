@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./ui.css";
 import { trpc } from "./trpc.ui";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { figmaUiLink } from "trpc-figma";
+import { figmaUiLink } from "trpc-figma/link";
 
 export function App() {
   const [queryClient] = useState(() => new QueryClient());

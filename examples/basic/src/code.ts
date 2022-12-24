@@ -1,4 +1,4 @@
-import { createFigmaHandler } from "trpc-figma";
+import { createFigmaHandler } from "trpc-figma/adapter";
 import { appRouter } from "./trpc.code";
 
 createFigmaHandler({
