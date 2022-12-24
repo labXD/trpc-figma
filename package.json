@@ -3,19 +3,30 @@
   "version": "0.2.2",
   "description": "tRPC adapter for figma plugins",
   "exports": {
-    "adapter": {
+    "./adapter": {
       "require": "./dist/adapter/index.js",
       "types": "./dist/adapter/index.d.ts"
     },
-    "link": {
+    "./link": {
       "require": "./dist/link/index.js",
       "types": "./dist/link/index.d.ts"
     }
   },
+  "typesVersions": {
+    "*": {
+      "adapter": [
+        "./dist/adapter/index.d.ts"
+      ],
+      "link": [
+        "./dist/link/index.d.ts"
+      ]
+    }
+  },
   "scripts": {
+    "dev": "pnpm build:pkg --watch",
     "dev:all": "pnpm run dev & pnpm run -r dev",
     "typecheck": "tsc --noEmit",
-    "build:pkg": "tsup src/adapter/index.ts src/link/index.ts --format cjs --dts",
+    "build:pkg": "tsup src/adapter/index.ts src/link/index.ts --format cjs --dts --treeshake",
     "prebuild": "rimraf dist",
     "build": "pnpm run typecheck && pnpm run build:pkg"
   },
